@@ -8,7 +8,6 @@ function Form({ state }) {
   const [password, setPassword] = useState("");
   const { setUserToken } = useContext(TokenContext);
   const navigate = useNavigate();
-
   function handleLogs(e) {
     if (e.target.id === "email") {
       setEmail(e.target.value);

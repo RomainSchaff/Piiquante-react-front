@@ -1,0 +1,12 @@
+#like,
+#dislike {
+  display: flex;
+  flex-direction: row;
+}
+
+#like p,
+#dislike p {
+  margin: 0;
+  margin-right: 10px;
+  padding: 0;
+}

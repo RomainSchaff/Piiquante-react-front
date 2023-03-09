@@ -1,8 +1,11 @@
 import "./admin.css";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import Addcard from "../../addcard/addcard";
 
 function Admin({ userToken, sauceUserId, sauceId }) {
   const admin = userToken.userId ? userToken.userId === sauceUserId : false;
+  const [openForm, setOpenForm] = useState(false);
   const navigate = useNavigate();
 
   async function deleteSauce() {
@@ -14,25 +17,33 @@ function Admin({ userToken, sauceUserId, sauceId }) {
       .then((response) => response.json())
       .then((data) => {
         console.log("delete");
-        navigate("/");
+        navigate("/reviews");
       })
       .catch((err) => console.log(err));
   }
 
   function modifySauce() {
-    console.log("Lol");
-    navigate("/");
+    setOpenForm(!openForm);
   }
 
   return (
     <>
       {admin ? (
         <>
+          {!openForm ? (
+            <button id="modify" onClick={modifySauce}>
+              <i className="fa-solid fa-arrow-rotate-left"></i>
+            </button>
+          ) : (
+            <>
+              <button id="close" onClick={modifySauce}>
+                <i className="fa-solid fa-xmark"></i>
+              </button>
+              <Addcard sauceId={sauceId} />
+            </>
+          )}
           <button id="delete" onClick={deleteSauce}>
-            Supprimer
-          </button>
-          <button id="modify" onClick={modifySauce}>
-            Modifier
+            <i className="fa-solid fa-ban"></i>
           </button>
         </>
       ) : null}

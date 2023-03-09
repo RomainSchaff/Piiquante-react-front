@@ -3,10 +3,13 @@ import { Link, useParams } from "react-router-dom";
 import { TokenContext } from "../Context/context.jsx";
 import Admin from "./admin/admin.jsx";
 import "./card.css";
+import Likes from "./likes/likes.jsx";
 
 function Card() {
   const { userToken } = useContext(TokenContext);
   const [sauce, setSauce] = useState([]);
+  const [likesCount, setLikesCount] = useState(0);
+  const [dislikesCount, setDislikesCount] = useState(0);
   const [liked, setLiked] = useState(false);
   const [disliked, setDisliked] = useState(false);
   let { id } = useParams();
@@ -19,6 +22,8 @@ function Card() {
       .then((response) => response.json())
       .then((data) => {
         setSauce(data);
+        setLikesCount(data.likes);
+        setDislikesCount(data.dislikes);
         console.log(data);
         for (let i = 0; i < data.usersLiked.length; i++) {
           if (data.usersLiked[i] === userToken.userId) {
@@ -49,36 +54,28 @@ function Card() {
           <p id="sauce-manufacturer">by {sauce.manufacturer}</p>
           <p id="sauce-description-title">Description:</p>
           <p id="sauce-description">{sauce.description}</p>
-          <div>
-            {liked ? (
-              <button
-                id="like"
-                style={{ color: "green", border: "3px solid green" }}
-              >
-                {sauce.likes}👍
-              </button>
-            ) : (
-              <button id="like">{sauce.likes}👍</button>
-            )}
-            {disliked ? (
-              <button
-                id="dislike"
-                style={{ color: "red", border: "3px solid red" }}
-              >
-                {sauce.dislikes}👎
-              </button>
-            ) : (
-              <button id="dislike">{sauce.dislikes}👎</button>
-            )}
-          </div>
-          <Admin
-            userToken={userToken}
-            sauceUserId={sauce.userId}
+          <Likes
+            liked={liked}
+            setLiked={setLiked}
+            disliked={disliked}
+            setDisliked={setDisliked}
+            likes={likesCount}
+            setLikes={setLikesCount}
+            dislikes={dislikesCount}
+            setDislikes={setDislikesCount}
             sauceId={sauce._id}
+            userId={userToken.userId}
           />
-          <Link to="/reviews" id="back">
-            🚪
-          </Link>
+          <div id="admin-container">
+            <Link to="/reviews" id="back">
+              <i className="fa-solid fa-left-long"></i>
+            </Link>
+            <Admin
+              userToken={userToken}
+              sauceUserId={sauce.userId}
+              sauceId={sauce._id}
+            />
+          </div>
         </figcaption>
       </figure>
     </div>

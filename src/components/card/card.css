@@ -1,7 +1,10 @@
 #card {
+  position: relative;
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  margin-top: 0;
+  padding-top: 50px;
 }
 
 #card img {
@@ -13,6 +16,7 @@
   position: relative;
   text-align: start;
   margin-left: 10px;
+  width: 500px;
 }
 
 #sauce-name {
@@ -36,9 +40,11 @@
   font-size: 20px;
 }
 
+/* #admin-container {
+  position: relative;
+} */
+
 #card a {
-  position: absolute;
-  bottom: -100px;
   margin: 15px;
   padding: 5px 15px;
   font-size: 25px;
@@ -50,7 +56,6 @@
 
 #card button {
   margin: 15px;
-  padding: 5px 15px;
   font-size: 25px;
   background-color: white;
   border: 1px ridge rgb(0, 0, 0);
@@ -60,8 +65,6 @@
 #card button:hover,
 #card a:hover {
   box-shadow: 2px 2px 5px grey;
-  transform: scale(1.1);
-  transition: transform 0.2s;
   cursor: pointer;
 }
 

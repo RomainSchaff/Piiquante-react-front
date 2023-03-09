@@ -1,3 +1,30 @@
+#modify-card-form {
+  position: absolute;
+  margin: auto;
+  top: -50px;
+  z-index: 2;
+  background-color: white;
+  padding-left: 50px;
+  padding-top: 50px;
+}
+
+#add-card-form {
+}
+
+#send,
+#confirm {
+  color: rgb(51, 139, 0);
+  border: 3px solid rgb(51, 139, 0) !important;
+  cursor: pointer;
+}
+
+#send:hover,
+#confirm:hover {
+  box-shadow: 2px 2px 5px grey;
+  transform: scale(1.1);
+  transition: transform 0.2s;
+}
+
 #form-heat {
   display: flex;
   align-items: center;
