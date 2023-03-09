@@ -26,7 +26,9 @@ function Home() {
                 <p key={sauce.name} className="sauce-name">
                   {sauce.name}
                 </p>
-                <p key={sauce.heat}>Heat : {sauce.heat}/10</p>
+                <p key={sauce.heat} className="sauce-heat">
+                  <i class="fa-solid fa-pepper-hot"></i> {sauce.heat}
+                </p>
               </figcaption>
             </Link>
           </figure>
