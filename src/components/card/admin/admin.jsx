@@ -17,7 +17,7 @@ function Admin({ userToken, sauceUserId, sauceId }) {
       .then((response) => response.json())
       .then((data) => {
         console.log("delete");
-        navigate("/reviews");
+        navigate("/Piiquante-react-front/reviews");
       })
       .catch((err) => console.log(err));
   }

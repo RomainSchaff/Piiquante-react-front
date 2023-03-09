@@ -31,7 +31,7 @@ function Addcard({ sauceId }) {
     })
       .then((response) => {
         response.json();
-        navigate("/reviews");
+        navigate("/Piiquante-react-front/reviews");
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -55,7 +55,7 @@ function Addcard({ sauceId }) {
     })
       .then((response) => {
         response.json();
-        navigate(`/reviews`);
+        navigate(`/Piiquante-react-front/reviews`);
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -126,7 +126,7 @@ function Addcard({ sauceId }) {
         ></input>
         <output>{heat}</output>
       </div>
-      {urlHref === "/add-a-sauce" ? (
+      {urlHref === "/Piiquante-react-front/add-a-sauce" ? (
         <input type="submit" value="Envoyer" id="send"></input>
       ) : (
         <input type="submit" value="Confirm" id="confirm"></input>

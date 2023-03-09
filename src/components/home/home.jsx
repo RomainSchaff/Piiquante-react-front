@@ -17,7 +17,10 @@ function Home() {
       <div id="grille">
         {sauces.map((sauce, index) => (
           <figure key={index}>
-            <Link to={`/sauce/${sauce._id}`} key={index + "L"}>
+            <Link
+              to={`/Piiquante-react-front/sauce/${sauce._id}`}
+              key={index + "L"}
+            >
               <img src={sauce.imageUrl} alt={sauce.name} />
               <figcaption>
                 <p key={sauce.name} className="sauce-name">

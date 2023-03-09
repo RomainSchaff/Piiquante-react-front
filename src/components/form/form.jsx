@@ -33,7 +33,7 @@ function Form({ state }) {
         setUserToken(data);
         localStorage.setItem("user", JSON.stringify(data));
         console.log(data);
-        navigate("/reviews");
+        navigate("/Piiquante-react-front/reviews");
       })
       .catch((err) => console.log(err));
   }
@@ -52,7 +52,7 @@ function Form({ state }) {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-        navigate("/login");
+        navigate("/Piiquante-react-front/login");
       })
       .catch((err) => console.log(err));
   }

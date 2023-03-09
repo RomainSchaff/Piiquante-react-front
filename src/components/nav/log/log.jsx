@@ -14,17 +14,18 @@ function Log({ userLogedIn }) {
 
   return userLogedIn ? (
     <div id="log-container">
-      <Link to="/" id="logout" onClick={handleLogout}>
+      <Link to="/Piiquante-react-front/" id="logout" onClick={handleLogout}>
         logout
       </Link>
     </div>
   ) : (
     <div id="log-container">
       <Link
-        to="/"
+        to="/Piiquante-react-front/"
         id="login"
         style={
-          urlHref === "/login" || urlHref === "/"
+          urlHref === "/Piiquante-react-front/login" ||
+          urlHref === "/Piiquante-react-front/"
             ? { textDecoration: "underline", fontWeight: "bold" }
             : null
         }
@@ -32,10 +33,10 @@ function Log({ userLogedIn }) {
         Login
       </Link>
       <Link
-        to="/signup"
+        to="/Piiquante-react-front/signup"
         id="signup"
         style={
-          urlHref === "/signup"
+          urlHref === "/Piiquante-react-front/signup"
             ? { textDecoration: "underline", fontWeight: "bold" }
             : null
         }

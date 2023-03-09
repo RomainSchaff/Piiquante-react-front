@@ -67,7 +67,7 @@ function Card() {
             userId={userToken.userId}
           />
           <div id="admin-container">
-            <Link to="/reviews" id="back">
+            <Link to="/Piiquante-react-front/reviews" id="back">
               <i className="fa-solid fa-left-long"></i>
             </Link>
             <Admin

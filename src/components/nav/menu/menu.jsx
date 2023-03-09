@@ -7,10 +7,10 @@ function Menu({ userLogedIn }) {
   return userLogedIn ? (
     <div id="menu">
       <Link
-        to="/reviews"
+        to="/Piiquante-react-front/reviews"
         id="all-sauce"
         style={
-          urlHref === "/reviews"
+          urlHref === "/Piiquante-react-front/reviews"
             ? { textDecoration: "underline", fontWeight: "bold" }
             : null
         }
@@ -18,10 +18,10 @@ function Menu({ userLogedIn }) {
         All sauces
       </Link>
       <Link
-        to="/add-a-sauce"
+        to="/Piiquante-react-front/add-a-sauce"
         id="add-sauce"
         style={
-          urlHref === "/add-a-sauce"
+          urlHref === "/Piiquante-react-front/add-a-sauce"
             ? { textDecoration: "underline", fontWeight: "bold" }
             : null
         }

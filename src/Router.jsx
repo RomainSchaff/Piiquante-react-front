@@ -20,14 +20,26 @@ import PrivateRoutes from "./PrivateRoutes";
 // Configure nested routes with JSX
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Root />}>
+    <Route path="/Piiquante-react-front/" element={<Root />}>
       <Route index element={<Form state="login" />} />
-      <Route path="/signup" element={<Form state="signup" />} />
-      <Route path="/*" element={<Error />} />
+      <Route
+        path="/Piiquante-react-front/signup"
+        element={<Form state="signup" />}
+      />
+      <Route path="/Piiquante-react-front/*" element={<Error />} />
       <Route element={<PrivateRoutes />}>
-        <Route path="/sauce/:id" element={<Card />} />
-        <Route path="/add-a-sauce" element={<Addcard />} exact />
-        <Route path="/reviews" element={<Home />} loader={saucesLoader} exact />
+        <Route path="/Piiquante-react-front/sauce/:id" element={<Card />} />
+        <Route
+          path="/Piiquante-react-front/add-a-sauce"
+          element={<Addcard />}
+          exact
+        />
+        <Route
+          path="/Piiquante-react-front/reviews"
+          element={<Home />}
+          loader={saucesLoader}
+          exact
+        />
       </Route>
     </Route>
   )
