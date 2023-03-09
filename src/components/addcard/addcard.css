@@ -1,0 +1,12 @@
+#form-heat {
+  display: flex;
+  align-items: center;
+}
+
+#heat:focus {
+  box-shadow: none;
+}
+
+output {
+  margin-left: 5px;
+}

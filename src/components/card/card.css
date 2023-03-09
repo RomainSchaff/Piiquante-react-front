@@ -1,0 +1,71 @@
+#card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#card img {
+  width: 450px;
+  margin-right: 50px;
+}
+
+#card figcaption {
+  position: relative;
+  text-align: start;
+  margin-left: 10px;
+}
+
+#sauce-name {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+}
+
+#sauce-manufacturer {
+  font-style: italic;
+  margin-top: 5px;
+}
+
+#sauce-description-title {
+  font-size: 26px;
+  margin: 10px 0px;
+  text-decoration: underline;
+}
+
+#sauce-description {
+  font-size: 20px;
+}
+
+#card a {
+  position: absolute;
+  bottom: -100px;
+  margin: 15px;
+  padding: 5px 15px;
+  font-size: 25px;
+  color: black;
+  background-color: white;
+  border: 1px ridge rgb(0, 0, 0);
+  border-radius: 5px;
+}
+
+#card button {
+  margin: 15px;
+  padding: 5px 15px;
+  font-size: 25px;
+  background-color: white;
+  border: 1px ridge rgb(0, 0, 0);
+  border-radius: 5px;
+}
+
+#card button:hover,
+#card a:hover {
+  box-shadow: 2px 2px 5px grey;
+  transform: scale(1.1);
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+#card button:focus,
+#card a:focus {
+  font-weight: bold;
+}
