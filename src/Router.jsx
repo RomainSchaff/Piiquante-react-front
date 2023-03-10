@@ -20,7 +20,11 @@ import PrivateRoutes from "./PrivateRoutes";
 // Configure nested routes with JSX
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/Piiquante-react-front/" element={<Root />}>
+    <Route
+      path="/Piiquante-react-front/"
+      basename="https://romainschaff.github.io/Piiquante-react-front"
+      element={<Root />}
+    >
       <Route index element={<Form state="login" />} />
       <Route
         path="/Piiquante-react-front/signup"
