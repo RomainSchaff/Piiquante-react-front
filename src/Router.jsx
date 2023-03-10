@@ -22,7 +22,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route
       path="/Piiquante-react-front/"
-      basename="https://romainschaff.github.io/Piiquante-react-front"
+      basename="/Piiquante-react-front"
       element={<Root />}
     >
       <Route index element={<Form state="login" />} />
