@@ -10,7 +10,7 @@ function Admin({ userToken, sauceUserId, sauceId }) {
 
   async function deleteSauce() {
     const headers = { "Content-Type": "application/json" };
-    await fetch(`http://localhost:3000/api/sauces/${sauceId}`, {
+    await fetch(`https://piiquante-back.onrender.com/api/sauces/${sauceId}`, {
       method: "DELETE",
       headers,
     })

@@ -27,7 +27,7 @@ function Form({ state }) {
       body: JSON.stringify(body),
     };
 
-    fetch("http://localhost:3000/api/auth/login", myInit)
+    fetch("https://piiquante-back.onrender.com/api/auth/login", myInit)
       .then((response) => response.json())
       .then((data) => {
         setUserToken(data);
@@ -48,7 +48,7 @@ function Form({ state }) {
       body: JSON.stringify(body),
     };
 
-    fetch("http://localhost:3000/api/auth/signup", myInit)
+    fetch("https://piiquante-back.onrender.com/api/auth/signup", myInit)
       .then((response) => response.json())
       .then((data) => {
         console.log(data);

@@ -25,7 +25,7 @@ function Addcard({ sauceId }) {
     formData.append("image", file);
     formData.append("heat", heat);
 
-    await fetch("http://localhost:3000/api/sauces/", {
+    await fetch("https://piiquante-back.onrender.com/api/sauces/", {
       method: "POST",
       body: formData,
     })
@@ -49,7 +49,7 @@ function Addcard({ sauceId }) {
     formData.append("image", file);
     formData.append("heat", heat);
 
-    await fetch(`http://localhost:3000/api/sauces/${sauceId}`, {
+    await fetch(`https://piiquante-back.onrender.com/api/sauces/${sauceId}`, {
       method: "PUT",
       body: formData,
     })

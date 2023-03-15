@@ -16,7 +16,7 @@ function Card() {
 
   async function getSauce() {
     const headers = { "Content-Type": "application/json" };
-    await fetch(`http://localhost:3000/api/sauces/${id}`, {
+    await fetch(`https://piiquante-back.onrender.com/api/sauces/${id}`, {
       headers,
     })
       .then((response) => response.json())

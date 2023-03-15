@@ -38,11 +38,14 @@ function Likes({
     console.log(dislikes);
     const headers = { "Content-Type": "application/json" };
     const body = { like: dislikesCode, userId: userId };
-    await fetch(`http://localhost:3000/api/sauces/${sauceId}/like`, {
-      headers,
-      method: "POST",
-      body: JSON.stringify(body),
-    })
+    await fetch(
+      `https://piiquante-back.onrender.com/api/sauces/${sauceId}/like`,
+      {
+        headers,
+        method: "POST",
+        body: JSON.stringify(body),
+      }
+    )
       .then((response) => response.json())
       .then((data) => {
         console.log(data);

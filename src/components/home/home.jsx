@@ -3,7 +3,9 @@ import "./home.css";
 
 export async function saucesLoader() {
   const headers = { "Content-Type": "application/json" };
-  const res = await fetch("http://localhost:3000/api/sauces", { headers });
+  const res = await fetch("https://piiquante-back.onrender.com/api/sauces", {
+    headers,
+  });
   const data = await res.json();
   return data;
 }
