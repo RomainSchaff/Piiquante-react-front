@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Piiquante-react-front/static/css/main.6f1c3453.css",
-    "main.js": "/Piiquante-react-front/static/js/main.8ea73723.js",
+    "main.js": "/Piiquante-react-front/static/js/main.a33e1a22.js",
     "static/js/787.a7e7e7f2.chunk.js": "/Piiquante-react-front/static/js/787.a7e7e7f2.chunk.js",
     "index.html": "/Piiquante-react-front/index.html",
     "main.6f1c3453.css.map": "/Piiquante-react-front/static/css/main.6f1c3453.css.map",
-    "main.8ea73723.js.map": "/Piiquante-react-front/static/js/main.8ea73723.js.map",
+    "main.a33e1a22.js.map": "/Piiquante-react-front/static/js/main.a33e1a22.js.map",
     "787.a7e7e7f2.chunk.js.map": "/Piiquante-react-front/static/js/787.a7e7e7f2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6f1c3453.css",
-    "static/js/main.8ea73723.js"
+    "static/js/main.a33e1a22.js"
   ]
 }
