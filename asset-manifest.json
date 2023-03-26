@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Piiquante-react-front/static/css/main.6f1c3453.css",
-    "main.js": "/Piiquante-react-front/static/js/main.3d7b4e91.js",
+    "main.css": "/Piiquante-react-front/static/css/main.6b9a38c0.css",
+    "main.js": "/Piiquante-react-front/static/js/main.6f159eef.js",
     "static/js/787.a7e7e7f2.chunk.js": "/Piiquante-react-front/static/js/787.a7e7e7f2.chunk.js",
     "index.html": "/Piiquante-react-front/index.html",
-    "main.6f1c3453.css.map": "/Piiquante-react-front/static/css/main.6f1c3453.css.map",
-    "main.3d7b4e91.js.map": "/Piiquante-react-front/static/js/main.3d7b4e91.js.map",
+    "main.6b9a38c0.css.map": "/Piiquante-react-front/static/css/main.6b9a38c0.css.map",
+    "main.6f159eef.js.map": "/Piiquante-react-front/static/js/main.6f159eef.js.map",
     "787.a7e7e7f2.chunk.js.map": "/Piiquante-react-front/static/js/787.a7e7e7f2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6f1c3453.css",
-    "static/js/main.3d7b4e91.js"
+    "static/css/main.6b9a38c0.css",
+    "static/js/main.6f159eef.js"
   ]
 }
