@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { TokenContext } from "../Context/context";
 import "./form.css";
 import { useNavigate } from "react-router-dom";
@@ -7,7 +7,7 @@ function Form({ state }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
-  const { setUserToken } = useContext(TokenContext);
+  const { userToken, setUserToken } = useContext(TokenContext);
   const navigate = useNavigate();
   function handleLogs(e) {
     if (e.target.id === "email") {
@@ -17,6 +17,12 @@ function Form({ state }) {
       setPassword(e.target.value);
     }
   }
+
+  useEffect(() => {
+    if (userToken.token !== "0") {
+      navigate("/Piiquante-react-front/reviews");
+    }
+  }, []);
 
   function sendLogin(e) {
     e.preventDefault();
@@ -31,7 +37,6 @@ function Form({ state }) {
     fetch("https://piiquante-back.onrender.com/api/auth/login", myInit)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         if (data.error) {
           alert(`Error: ${data.error}`);
         } else {
@@ -58,7 +63,6 @@ function Form({ state }) {
     fetch("https://piiquante-back.onrender.com/api/auth/signup", myInit)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setLoading(false);
         navigate("/Piiquante-react-front/login");
       })
@@ -84,22 +88,31 @@ function Form({ state }) {
           onChange={handleLogs}
           required
         ></input>
-        {state === "login" ? (
-          <input
-            type="submit"
-            value="Login"
-            id="submit"
-            onClick={sendLogin}
-          ></input>
-        ) : (
-          <input
-            type="submit"
-            value="Signup"
-            id="submit"
-            onClick={sendSignup}
-          ></input>
-        )}
-        {loading && <div>Chargement...</div>}
+        <div id="submit-loader-container">
+          {state === "login" ? (
+            <input
+              type="submit"
+              value="Login"
+              id="submit"
+              onClick={sendLogin}
+            ></input>
+          ) : (
+            <input
+              type="submit"
+              value="Signup"
+              id="submit"
+              onClick={sendSignup}
+            ></input>
+          )}
+          {loading && (
+            <div className="lds-ellipsis">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          )}
+        </div>
       </form>
     </>
   );

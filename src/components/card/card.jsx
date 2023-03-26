@@ -24,16 +24,13 @@ function Card() {
         setSauce(data);
         setLikesCount(data.likes);
         setDislikesCount(data.dislikes);
-        console.log(data);
         for (let i = 0; i < data.usersLiked.length; i++) {
           if (data.usersLiked[i] === userToken.userId) {
-            console.log("TROUVER");
             setLiked(true);
           }
         }
         for (let i = 0; i < data.usersDisliked.length; i++) {
           if (data.usersDisliked[i] === userToken.userId) {
-            console.log("TROUVER");
             setDisliked(true);
           }
         }
