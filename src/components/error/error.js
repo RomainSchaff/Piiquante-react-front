@@ -4,8 +4,9 @@ import "./error";
 function Error() {
   return (
     <div>
-      Il y a une erreur dans l'url de navigation <Link to="/">clickez ici</Link>{" "}
-      pour revenir à la l'accueil{" "}
+      Il y a une erreur dans l'url de navigation{" "}
+      <Link to="/Piiquante-react-front/">clickez ici</Link> pour revenir à la
+      l'accueil{" "}
     </div>
   );
 }

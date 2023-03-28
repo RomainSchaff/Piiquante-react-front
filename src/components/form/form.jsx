@@ -64,7 +64,7 @@ function Form({ state }) {
       .then((response) => response.json())
       .then((data) => {
         setLoading(false);
-        navigate("/Piiquante-react-front/login");
+        navigate("/Piiquante-react-front/");
       })
       .catch((err) => console.log(err));
   }
